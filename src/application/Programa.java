@@ -99,32 +99,24 @@ public class Programa {
 		}
 		
 		var listaDaVaga2 = empresa.getCandidatosParaVagas().get(2);
-		System.out.println();
-		System.out.println("Vaga \t" + "Nome \t" + "\t" + "CPF \t" + "Nascimento \t" + "Idade \t");
 		for(int i = 0; i < listaDaVaga2.size(); i++) {
 			var candidatoDaLinha = listaDaVaga2.get(i);
 			System.out.println("2 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
 		}
 		
 		var listaDaVaga3 = empresa.getCandidatosParaVagas().get(3);
-		System.out.println();
-		System.out.println("Vaga \t" + "Nome \t" + "\t" + "CPF \t" + "Nascimento \t" + "Idade \t");
 		for(int i = 0; i < listaDaVaga3.size(); i++) {
 			var candidatoDaLinha = listaDaVaga3.get(i);
 			System.out.println("3 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
 		}
 		
 		var listaDaVaga4 = empresa.getCandidatosParaVagas().get(4);
-		System.out.println();
-		System.out.println("Vaga \t" + "Nome \t" + "\t" + "CPF \t" + "Nascimento \t" + "Idade \t");
 		for(int i = 0; i < listaDaVaga4.size(); i++) {
 			var candidatoDaLinha = listaDaVaga4.get(i);
 			System.out.println("4 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
 		}
 		
 		var listaDaVaga5 = empresa.getCandidatosParaVagas().get(5);
-		System.out.println();
-		System.out.println("Vaga \t" + "Nome \t" + "\t" + "CPF \t" + "Nascimento \t" + "Idade \t");
 		for(int i = 0; i < listaDaVaga5.size(); i++) {
 			var candidatoDaLinha = listaDaVaga5.get(i);
 			System.out.println("5 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
