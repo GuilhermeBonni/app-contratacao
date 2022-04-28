@@ -62,17 +62,18 @@ public class Programa {
 				
 				System.out.print("Nº da vaga: ");
 				String numeroDaVaga = sc.nextLine();
+				System.out.println();
 				
 				candidato = new Candidato(nome, sobrenome, cpf, nascimento);
 				empresa.verificarVaga(numeroDaVaga);
-				System.out.println();
+				
 
 				System.out.print("Candidato: " + candidato);
 				System.out.println();
 
 				if (listaDeCandidato.contains(candidato)) {
 					System.out.println();
-					System.out.println("ERRO: CPF já cadastrado no sistema!");
+					throw new DomainExceptions("ERRO: CPF já cadastrado no sistema!");
 				} 
 				listaDeCandidato.add(candidato);
 				candidato.toString();
@@ -92,34 +93,59 @@ public class Programa {
 		
 		var listaDaVaga1 = empresa.getCandidatosParaVagas().get(1);
 		System.out.println();
-		System.out.println("Vaga \t" + "Nome \t" + "\t" + "CPF \t" + "Nascimento \t" + "Idade \t");
+		System.out.println("Vaga \t" + "Nome \t" + "\t" + "\t" + "CPF \t" + "\t" +"Nascimento \t" + "Idade");
 		for(int i = 0; i < listaDaVaga1.size(); i++) {
 			var candidatoDaLinha = listaDaVaga1.get(i);
-			System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			if(candidatoDaLinha.getNome().length() > 8) {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
+			else {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + "\t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
 		}
 		
 		var listaDaVaga2 = empresa.getCandidatosParaVagas().get(2);
 		for(int i = 0; i < listaDaVaga2.size(); i++) {
 			var candidatoDaLinha = listaDaVaga2.get(i);
+			if(candidatoDaLinha.getNome().length() > 8) {
 			System.out.println("2 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
+			else {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + "\t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
 		}
 		
 		var listaDaVaga3 = empresa.getCandidatosParaVagas().get(3);
 		for(int i = 0; i < listaDaVaga3.size(); i++) {
 			var candidatoDaLinha = listaDaVaga3.get(i);
+			if(candidatoDaLinha.getNome().length() > 8) {
 			System.out.println("3 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
+			else {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + "\t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
 		}
 		
 		var listaDaVaga4 = empresa.getCandidatosParaVagas().get(4);
 		for(int i = 0; i < listaDaVaga4.size(); i++) {
 			var candidatoDaLinha = listaDaVaga4.get(i);
+			if(candidatoDaLinha.getNome().length() > 8) {
 			System.out.println("4 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
+			else {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + "\t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
 		}
 		
 		var listaDaVaga5 = empresa.getCandidatosParaVagas().get(5);
 		for(int i = 0; i < listaDaVaga5.size(); i++) {
 			var candidatoDaLinha = listaDaVaga5.get(i);
+			if(candidatoDaLinha.getNome().length() > 8) {
 			System.out.println("5 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
+			else {
+				System.out.println("1 \t" + candidatoDaLinha.getNome() + " " + candidatoDaLinha.getSobrenome() + " \t" + "\t" + candidatoDaLinha.getCpf() + " \t" + sdf.format(candidatoDaLinha.getNascimento()) + " \t" + candidatoDaLinha.pegarIdade(candidatoDaLinha.getNascimento()));
+			}
 		}
 
 		System.out.println();
